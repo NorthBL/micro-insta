@@ -1,0 +1,14 @@
+<div style="margin-top: 50px;">
+    <div class="card mx-auto" style="width:700px">
+        <img class="card-img-top" [src]="photo.url" alt="Card image" height="300px" width="300px">
+        <div class="card-body">
+            <h4 class="card-title">Title: {{photo.title}}</h4>
+            <h4 class="card-title">Url: {{photo.url}}</h4>
+            <h4 class="card-title">ThumbnailUrl: {{photo.thumbnailUrl}}</h4>
+            <button class="btn btn-primary" (click)="editPhoto(photo)">Edit Photo</button>
+            <button class="btn btn-danger" style="margin-left: 10px;" (click)="openDialog(photo)">Delete</button>
+            <button class="btn btn-primary" style="margin-left: 10px;" (click)="back()">Back</button>
+            <!--<app-editphoto [photo]="photo"></app-editphoto>-->
+        </div>
+      </div>
+</div>

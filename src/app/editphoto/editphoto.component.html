@@ -1,0 +1,26 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit()" class="card p-3 bg-light" ngNativeValidate style="margin-top: 50px;">
+    <h2 class="text-center">Edit photo</h2>
+  <!-- {{question | json}} -->
+  <div class="form-group">
+    <label>Edit title</label>
+    <input type="text" class="form-control" name="title" required [(ngModel)]="photo.title">
+  </div>
+
+
+  <div class="form-group">
+    <label>Edit url</label>
+    <input type="text" class="form-control" name="url" required [(ngModel)]="photo.url">
+  </div>
+
+  <div class="form-group">
+    <label>Edit thubnailurl</label>
+    <input type="text" class="form-control" name="thumbnailUrl"  required [(ngModel)]="photo.thumbnailUrl">
+  </div>
+  
+
+  <button class="btn btn-primary" type="submit">Edit</button>
+  <!--<button class="btn btn-primary" (click)="openDialog()">dialog</button>-->
+  <div class="alert alert-success" role="alert" *ngIf="succ">
+    Your photo is edited
+   </div>
+</form>

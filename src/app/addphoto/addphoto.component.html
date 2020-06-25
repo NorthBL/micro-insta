@@ -1,0 +1,28 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit()" class="card p-3 bg-light" style="margin-top: 50px;" ngNativeValidate>
+    <h2 class="text-center">Add photo</h2>
+  
+  <div class="form-group">
+    <label>Add title</label>
+    <input type="text" class="form-control" name="title" required [(ngModel)]="photo.title">
+  </div>
+
+
+  <div class="form-group">
+    <label>Add url</label>
+    <input type="text" class="form-control" name="url" required [(ngModel)]="photo.url">
+  </div>
+
+  <div class="form-group">
+    <label>Add thubnailurl</label>
+    <input type="text" class="form-control" name="thubnailUrl" required [(ngModel)]="photo.thubnailUrl">
+  </div>
+  
+
+  <button class="btn btn-primary" type="submit">Submit</button>
+
+  <div class="alert alert-success" role="alert" *ngIf="succ">
+   Created new photo
+  </div>
+
+</form>
+
